@@ -1,0 +1,137 @@
+/* header*/
+header {
+   background: #2C1E19;
+   height: 55px;
+   color: white;  /* màu chữ trắng cho phần header*/
+}
+/* Để dàng menu ngang giữa phần branch và list item*/
+.Menu {
+    display: flex;
+}
+/* tạo chiều dọc , đặt màu nền , đặt chiều cao của logo*/
+.Menu-branch {
+    align-items: center;
+    background: #2C1E19;
+    display: flex;
+    height: 55px;
+    padding-right: 10px; /* giãn cách với list item*/
+    flex-grow: 1; /*Bung hết khoảng trống còn lại của layout, 1=100% */
+}
+.Menu-branch_logo {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 200px;
+}
+/*căn chỉnh logo với kích thước bố*/
+.Menu-branch_logo img {
+    object-fit: cover;
+}
+/*tạo chiều ngang với flex và đặt chiều cao với height, cặp thuộc tính align-item: center và justify-content: center để căn giữa*/
+.Menu-branch-search {
+    align-items: center;
+    border-radius: 3px;
+    background: #ffffff;
+    color: black;
+    display: flex; justify-content: center;
+    flex-grow: 1;
+    height:35px;
+    overflow: hidden; /*đối tượng con nào nằm ngoài đối tượng bố có thuộc tính này sẽ bị ẩn*/
+} 
+.Menu-branch-search-location {
+    align-items:center; /*sau khi tăng chiều cao sẽ bị lệch, dùng lệnh này để căn giữa đối tượng,thêm display flex để nhận lệnh này*/
+    background: #ccc;
+    display:flex;
+    height:100%; /* đặt chiều cao để màu nền đầy khung bố*/
+    justify-content: center; /* lệnh này dùng chung với align item, tương tự text align center*/
+    width:110px; /* set cứng chiều rộng của đối tượng này */
+}
+.Menu-branch-search-input {
+    /*padding:0 5px; chuyển xuống đối tượng con,padding right và left,sử dụng padding để cách lề của khung input dùng margin khi nhấn vào khoảng giữa sẽ không nhận*/
+    height: 100%;
+    flex-grow: 1;
+    
+}
+.Menu-branch-search-input input {
+   
+    
+    padding:0 5px;
+
+    
+    width:100%;
+    height: 100%;
+    font-size: 16px;
+}
+.Menu-branch-search-button {
+    align-items: center;
+    cursor: pointer; /*hover vào ra hiệu ứng bàn tay*/
+    display: flex;
+    height:100%;
+    justify-content: center;
+    width:35px;
+    
+}
+.Menu-list {
+    display:flex;
+}
+.Menu-list-item {
+    align-items: center;
+    display: flex;
+    text-align: center; /*sử dựng text align thay thế cho justify để cho icon ra giữa*/
+    position: relative; /* Hứng thằng con absolute*/
+}
+.Menu-list-item-content {
+    align-items: center;
+    cursor: pointer;
+    display:flex;
+    height:100%;
+    padding:0 10px;
+    flex-direction: column; /* khi sử dụng flex thì các class con bị đẩy xuống hàng ngang sử dụng thuộc tính này để giữ nguyên hàng dọc */
+    justify-content:center;
+}
+.Menu-list-item-content:hover {
+    background:#fff;
+    color:black;
+}
+.Menu-list-item-content_txt {
+    font-size: 14px;
+    margin-top: 3px;
+}
+.Menu-list-item:hover .Menu-list-item-sub {
+    display: block;
+   
+}
+
+.Menu-list-item-sub {
+    bottom:0; /*Nằm cuối thằng bố nó*/
+    box-shadow:0px 1.5px 1px 1px rgba(0,0,0,0.2);
+    color: black;
+    display: none; /*ẩn sub list*/
+    left:0;
+    padding:0 3px;
+    position: absolute; /*Chồng lên layout và phải có 1 thằng bố hứng nó,mặc định sẽ là body*/
+    transform:translate(0, 100%); /*x y, y nhân lên và + vào y cũ*/
+ 
+}
+.Menu-list-item-sub-list {
+    display: flex;
+    flex-wrap: wrap; /* Khi tràn viền sẽ tự động xuống dòng*/
+    width:320px;
+}
+.Menu-list-item-sub-list-item {
+    text-align:left;
+    width:50%;
+}
+.Menu-list-item-sub-list-item_txt {
+    color:#555;
+     /*display: block; khi hover vào khoảng trống thì thẻ a vẫn nhận nên ko sử dụng,để thẻ a nhận căn lề,white-space để ko ngắt dòng*/
+    text-align:left;
+    padding:5px 10px;
+    white-space: nowrap;
+    
+}
+.Menu-list-item-sub-list-item_txt:hover {
+    color:#000;
+    opacity: 1; /*tắt mờ file common*/
+    text-decoration:underline;
+}
