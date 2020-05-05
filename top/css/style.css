@@ -1,4 +1,4 @@
-/* header*/
+/* header cho pc*/
 header {
    background: #2C1E19;
    height: 55px;
@@ -53,11 +53,7 @@ header {
     
 }
 .Menu-branch-search-input input {
-   
-    
     padding:0 5px;
-
-    
     width:100%;
     height: 100%;
     font-size: 16px;
@@ -74,6 +70,16 @@ header {
 .Menu-list {
     display:flex;
 }
+.Menu-list_link{
+    align-items: center;
+    color:#d5d5d5;
+    display: flex;
+    justify-content: center;
+}
+.Menu-list_link:hover {
+    color:white;
+    opacity: 1; /*Tắt mờ màu của file common*/
+}
 .Menu-list-item {
     align-items: center;
     display: flex;
@@ -83,6 +89,7 @@ header {
 .Menu-list-item-content {
     align-items: center;
     cursor: pointer;
+    /*color:white;*/
     display:flex;
     height:100%;
     padding:0 10px;
@@ -90,11 +97,13 @@ header {
     justify-content:center;
 }
 .Menu-list-item-content:hover {
-    background:#fff;
-    color:black;
+    
+    color:white;
+    /*opacity: 1; /*Tắt mờ file common của thẻ a cả màu nền lẫn màu chữ*/
 }
 .Menu-list-item-content_txt {
     font-size: 14px;
+    font-weight: bold;
     margin-top: 3px;
 }
 .Menu-list-item:hover .Menu-list-item-sub {
@@ -135,3 +144,101 @@ header {
     opacity: 1; /*tắt mờ file common*/
     text-decoration:underline;
 }
+.count {
+    color:red;
+}
+
+/*-----------------------------------------------------------------header cho sp-------------------------------------------------------------------------*/
+.Nav {
+    background:#2C1E19;
+    display:flex;
+    position: fixed; /*menu trượt theo lúc kéo*/
+    height:40px;
+    width:100%;
+}
+.Nav_logo {
+    align-items:center;
+    border:2px solid #ffffff;
+    border-radius: 3px;
+    display:flex;
+    height:40px;
+    margin:5px;
+    justify-content: center;
+    width:75px;
+}
+.Nav-search {
+    height:40px;
+    margin:5px;
+    flex-grow: 1;
+   
+}
+.Nav-search-content {
+    background:white;
+    border-radius: 3px;
+    display:flex;
+    overflow:hidden;
+    height:40px;
+    width:100%;
+}
+.Nav-search-content_input{
+    flex-grow:1;
+
+}
+.Nav-search-content_input input{
+    font-size:16px;
+    height:100%;
+    padding:0 5px;
+    width:100%;
+
+}
+.Nav-search-content_button {
+    align-items: center;
+    color:black;
+    display: flex;
+    font-size: 20px;
+    padding:0 5px;
+    justify-content: center;
+    width:35px;
+}
+.Nav-hamburger {
+    align-items: center;
+    display: flex;
+    height:40px;
+    overflow: hidden;
+    margin:5px 0px;
+    justify-content: center;
+    width:45px;
+}
+.Nav-hamburger-content {
+    height: 20px;
+    width: 30px;
+    position: relative;
+}
+.Nav-hamburger-content_icon {
+    background: #ffffff;
+    right:0;
+    top:0;
+    height:2px;
+    width:100%;
+    position: absolute;
+    transition: all ease-in-out 0.25s;
+}
+.Nav-hamburger-content_icon:nth-child(2) {
+   top:10px;
+}
+.Nav-hamburger-content_icon:nth-child(3) {
+   top: 20px;
+}
+.Nav--active .Nav-hamburger-content_icon:first-child {
+    right: -60px;
+    transform: rotate(-185deg);
+    opacity: 0;
+}
+.Nav--active .Nav-hamburger-content_icon:nth-child(2) {
+    top:8px;
+    transform: rotate(-135deg);
+ }
+.Nav--active .Nav-hamburger-content_icon:nth-child(3) {
+    top: 8px;
+    transform: rotate(135deg);
+ }
