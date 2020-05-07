@@ -86,3 +86,6 @@ input, select, textarea {
 .Notification--active {
   transform: translateX(0);
 }
+.Noscroll {
+  overflow: hidden;
+}

@@ -125,6 +125,7 @@ require_once DOC_ROOT.'/vipphone/common/php/common.php';
     </header>
     <header class="only-sp">
         <div class="js-nav Nav">
+        <div class="Nav-content">
             <div class="Nav_logo">
                 <img src="/vipphone/common/img/logo.png" alt="logo">
             </div>
@@ -146,6 +147,20 @@ require_once DOC_ROOT.'/vipphone/common/php/common.php';
                     <span class="Nav-hamburger-content_icon"></span>
                 </div>
             </div>
+        </div>
+        <div class="Nav-menu">
+            <div class="Nav-menu-content">
+                <div class="Nav-menu-content-list">
+                    <a href="#" class="Nav-menu-content-list-item">TRANG CHỦ</a>
+                    <a href="#" class="Nav-menu-content-list-item">GIỚI THIỆU</a>
+                    <a href="#" class="Nav-menu-content-list-item">SẢN PHẨM</a>
+                    <a href="#" class="Nav-menu-content-list-item">TIN TỨC</a>
+                    <a href="#" class="Nav-menu-content-list-item">LIÊN HỆ</a>
+                    <a href="#" class="Nav-menu-content-list-item">GIỎ HÀNG</a>
+                    <a href="#" class="Nav-menu-content-list-item">ĐĂNG NHẬP</a>
+                </div>
+            </div>
+        </div>
         </div>
     </header>
 </body>

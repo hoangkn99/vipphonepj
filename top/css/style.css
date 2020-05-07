@@ -149,25 +149,35 @@ header {
 }
 
 /*-----------------------------------------------------------------header cho sp-------------------------------------------------------------------------*/
+
 .Nav {
+    display:flex;
+    height:55px;
+    transition: all ease-in-out 0.3s; /*Tạo hiệu ứng khi 1 đối tượng thay đổi kích thước*/
+    flex-direction: column; /* tạo phần cột(xem thêm)*/
+    overflow: hidden;
+    position: fixed; /*menu trượt theo lúc kéo*/
+    width:100%;
+
+}
+.Nav-content {
     background:#2C1E19;
     display:flex;
-    position: fixed; /*menu trượt theo lúc kéo*/
-    height:40px;
+    height:55px;
     width:100%;
 }
 .Nav_logo {
     align-items:center;
-    border:2px solid #ffffff;
+    border:2px solid #ff7653;
     border-radius: 3px;
     display:flex;
-    height:40px;
+    height:45px;
     margin:5px;
     justify-content: center;
     width:75px;
 }
 .Nav-search {
-    height:40px;
+    height:45px;
     margin:5px;
     flex-grow: 1;
    
@@ -177,7 +187,7 @@ header {
     border-radius: 3px;
     display:flex;
     overflow:hidden;
-    height:40px;
+    height:45px;
     width:100%;
 }
 .Nav-search-content_input{
@@ -203,7 +213,7 @@ header {
 .Nav-hamburger {
     align-items: center;
     display: flex;
-    height:40px;
+    height:45px;
     overflow: hidden;
     margin:5px 0px;
     justify-content: center;
@@ -215,7 +225,7 @@ header {
     position: relative;
 }
 .Nav-hamburger-content_icon {
-    background: #ffffff;
+    background: #ff7653;
     right:0;
     top:0;
     height:2px;
@@ -228,6 +238,9 @@ header {
 }
 .Nav-hamburger-content_icon:nth-child(3) {
    top: 20px;
+}
+.Nav--active {
+    height:100%;
 }
 .Nav--active .Nav-hamburger-content_icon:first-child {
     right: -60px;
@@ -242,3 +255,59 @@ header {
     top: 8px;
     transform: rotate(135deg);
  }
+ .Nav-menu {
+     background:rgba(0,0,0,0.25);
+     transition: all ease-in-out 0.3s; /*Có hay không cũng được*/
+     flex-grow: 1;
+     width:100%;
+ }
+ body {
+     height:1500px;
+ }
+ .Nav-menu-content {
+    background: #2C1E19;
+ }
+ .Nav-menu-content-list {
+     display:flex;
+     flex-wrap: wrap;
+ }
+ /*Từ 1024px trở xuống*/
+ .Nav-menu-content-list-item {
+    border: 1px solid #ff7653;
+    border-radius: 5px;
+    color: #ff7653;
+    font-size: 13px;
+    margin:0.5% 0.5%;
+    padding: 5px 0;
+    text-align: center;
+    width: 19%;
+}
+/*Từ 768px trở xuống*/
+@media screen and (max-width: 768px) {
+    .Nav-menu-content-list-item {
+        
+        font-size: 13px;
+        margin:0.5% 0.5%;
+        padding: 5px 0;
+        width: 24%;
+    }
+}
+
+/*Từ 420px trở xuống*/
+@media screen and (max-width: 420px) {
+    .Nav-menu-content-list-item {
+        font-size: 13px;
+        margin:0.5% 0.5%;
+        padding: 5px 0;
+        width: 32.33%;
+    }
+  }
+/*Từ 375px trở xuống*/
+@media screen and (max-width: 375px) {
+    .Nav-menu-content-list-item {
+        font-size: 13px;
+        margin:0.5% 0.5%;
+        padding: 5px 0;
+        width: 49%;
+    }
+  }
