@@ -9,159 +9,144 @@ require_once DOC_ROOT.'/vipphone/common/php/common.php';
 <head>
     <?=insertHeadInfo();?>
     <?=insertCSS('/vipphone/top/css/style.css');?>
-    <?=insertJS('/vipphone/top/js/script.js');?>
+   
 </head>
 <body>
-    <header class="only-pc">
-        <div class="Responsive">
-            <div class="Menu">
-                <div class="Menu-branch">
-                    <div class="Menu-branch_logo">
-                        <img src="/vipphone/common/img/logo.png" alt="">
+    <!-- Header -->
+    <?php include_once('common/inc/header.php')
+        /* Nếu up lên host bị lổi thì đổi đường dẫn thành (DOC_ROOT. 'vipphone/common/inc/header.php') */
+    ?>  
+    <!-- Banner -->
+    <div class="Banner Responsive">
+        <div class="js-carousel Carousel">
+            <div class="js-carouselCtx Carousel-content" >
+                <div class="js-carouselList Carousel-content-list">
+                    <div class="Carousel-content-item" id="carousel1">
+                        <img src="/vipphone/top/img/slide3.png" alt="slide1">
                     </div>
-                    <div class="Menu-branch-search">
-                        <!--<div class="Menu-branch-search-location">
-                            <p class="Menu-branch-search-location_txt">Hồ Chí Minh </p>
-                        </div> -->
-                        <div class="Menu-branch-search-input">
-                            <input type="text" name="" value="" placeholder="Tìm kiếm...">
-                        </div>
-                        <div class="Menu-branch-search-button">
-                            <i class="fa fa-search"></i>
-                        </div>
+                    <div class="Carousel-content-item" id="carousel2">
+                        <img src="/vipphone/top/img/slide3.png" alt="slide2">
+                    </div>
+                    <div class="Carousel-content-item" id="carousel3">
+                        <img src="/vipphone/top/img/slide3.png" alt="slide3">
+                    </div>
+                    <div class="Carousel-content-item" id="carousel4">
+                        <img src="/vipphone/top/img/slide4.jpg" alt="slide4">
+                    </div>
+                    <div class="Carousel-content-item" id="carousel5">
+                        <img src="/vipphone/top/img/slide5.webp" alt="slide5">
+                    </div>
+                    <div class="Carousel-content-item" id="carousel6">
+                        <img src="/vipphone/top/img/slide6.png" alt="slide6">
                     </div>
                 </div>
-                <div class="Menu-list">
-                    <a href="/vipphone/register.php" class="Menu-list_link">
-                    <div class="Menu-list-item">
-                        <div class="Menu-list-item-content">
-                            <div class="Menu-list-item-content_icon"><i class="fas fa-home"></i></div>
-                            <p class="Menu-list-item-content_txt">TRANG CHỦ</p>
-                        </div>
-                    </div>
-                    </a>
-                    <a href="/vipphone/register.php" class="Menu-list_link">
-                    <div class="Menu-list-item">
-                        <div class="Menu-list-item-content">
-                            <div class="Menu-list-item-content_icon"><i class="fas fa-info"></i></div>
-                            <p class="Menu-list-item-content_txt">GIỚI THIỆU</p>
-                        </div>
-                    </div>
-                    </a>
-                    <a href="/vipphone/register.php" class="Menu-list_link">
-                    <div class="Menu-list-item">
-                        <div class="Menu-list-item-content">
-                            <div class="Menu-list-item-content_icon"><i class="fas fa-mobile-alt"></i></div>
-                            <p class="Menu-list-item-content_txt">SẢN PHẨM</p>
-                        </div>
-                    </a>
-                        <div class="Menu-list-item-sub">
-                            <div class="Menu-list-item-sub-list">
-                                <div class="Menu-list-item-sub-list-item">
-                                    <a href="/vipphone/register.php" class="Menu-list-item-sub-list-item_txt">Iphone</a>
-                                </div>
-                                <div class="Menu-list-item-sub-list-item">
-                                    <a href="#" class="Menu-list-item-sub-list-item_txt">SamSung</a>
-                                </div>
-                                <div class="Menu-list-item-sub-list-item">
-                                    <a href="#" class="Menu-list-item-sub-list-item_txt">Xiaomi</a>
-                                </div>
-                                <div class="Menu-list-item-sub-list-item">
-                                    <a href="#" class="Menu-list-item-sub-list-item_txt">Sony</a>
-                                </div>
-                                <div class="Menu-list-item-sub-list-item">
-                                    <a href="#" class="Menu-list-item-sub-list-item_txt">OPPO</a>
-                                </div>
-                                <div class="Menu-list-item-sub-list-item">
-                                    <a href="#" class="Menu-list-item-sub-list-item_txt">Huawei</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <a href="/vipphone/register.php" class="Menu-list_link">
-                    <div class="Menu-list-item">
-                        <div class="Menu-list-item-content">
-                            <div class="Menu-list-item-content_icon"><i class="far fa-newspaper"></i></div>
-                            <p class="Menu-list-item-content_txt">TIN TỨC</p>
-                        </div>
-                    </div>
-                    </a>
-                    <a href="/vipphone/register.php" class="Menu-list_link">
-                    <div class="Menu-list-item">
-                        <div class="Menu-list-item-content">
-                            <div class="Menu-list-item-content_icon"><i class="far fa-id-card"></i></div>
-                            <p class="Menu-list-item-content_txt">LIÊN HỆ</p>
-                        </div>
-                    </div>
-                    <a href="/vipphone/register.php" class="Menu-list_link">
-                    <div class="Menu-list-item">
-                        <div class="Menu-list-item-content">
-                            <div class="Menu-list-item-content_icon"><i class="fas fa-shopping-cart"></i></div>
-                            <p class="Menu-list-item-content_txt">GIỎ HÀNG<span class="count">(0)</span></p>
-                        </div>
-                    </div>
-                    </a>
-                    </a>
-                    <a href="/vipphone/register.php" class="Menu-list_link">
-                    <div class="Menu-list-item">
-                        <div class="Menu-list-item-content">
-                            <div class="Menu-list-item-content_icon"><i class="fas fa-user"></i></div>
-                            <p class="Menu-list-item-content_txt">ĐĂNG NHẬP</p>
-                        </div>   
-                    </div>
-                    </a>
-                    <!--<a href="/vipphone/register.php" class="Menu-list_link">
-                    <div class="Menu-list-item">
-                        <div class="Menu-list-item-content">
-                            <div class="Menu-list-item-content_icon"><i class="fas fa-key"></i></div>
-                            <p class="Menu-list-item-content_txt">ĐĂNG KÍ</p>
-                        </div>
-                    </div>
-                    </a>-->
-                    
+                <div class="js-carouselBtn Carousel-content__btn"></div>
+                <div class="js-carouselBtn Carousel-content__btn Carousel-content__btn--right"></div>
+            </div>
+
+            <div class="Carousel-nav">
+                <div class="js-carouselNavItem Carousel-nav-item Carousel-nav-item--active" data-index="1">
+                    <p class="only-pc Carousel-nav-item__txt">1</p>
+                </div>
+                <div class="js-carouselNavItem Carousel-nav-item" data-index="2">
+                    <p class="only-pc Carousel-nav-item__txt">2</p>
+                </div>
+                <div class="js-carouselNavItem Carousel-nav-item" data-index="3">
+                    <p class="only-pc Carousel-nav-item__txt">3</p>
+                </div>
+                <div class="js-carouselNavItem Carousel-nav-item" data-index="4">
+                    <p class="only-pc Carousel-nav-item__txt">4</p>
+                </div>
+                <div class="js-carouselNavItem Carousel-nav-item" data-index="5">
+                    <p class="only-pc Carousel-nav-item__txt">5</p>
+                </div>
+                <div class="js-carouselNavItem Carousel-nav-item" data-index="6">
+                    <p class="only-pc Carousel-nav-item__txt">6</p>
                 </div>
             </div>
         </div>
-    </header>
-    <header class="only-sp">
-        <div class="js-nav Nav">
-        <div class="Nav-content">
-            <div class="Nav_logo">
-                <img src="/vipphone/common/img/logo.png" alt="logo">
-            </div>
-            <div class="Nav-search">
-                <div class="Nav-search-content">
-                    <div class="Nav-search-content_input">
-                        <input type="text" placeholder="Tìm kiếm">
-                    </div>
-                    <div class="Nav-search-content_button">
-                        <i class="fa fa-search"></i>
-                    </div>
-                </div>
-               
-            </div>
-            <div class="Nav-hamburger">
-                <div class="js-navHamburger Nav-hamburger-content">
-                    <span class="Nav-hamburger-content_icon"></span>
-                    <span class="Nav-hamburger-content_icon"></span>
-                    <span class="Nav-hamburger-content_icon"></span>
-                </div>
-            </div>
+        <div class="Banner-content">
+            <a href="#" class="Banner-content__item">
+                <img src="/vipphone/top/img/content1.webp" alt="">
+            </a>
+            <a href="#" class="Banner-content__item">
+            <img src="/vipphone/top/img/content2.webp" alt="">
+            </a>
         </div>
-        <div class="Nav-menu">
-            <div class="Nav-menu-content">
-                <div class="Nav-menu-content-list">
-                    <a href="#" class="Nav-menu-content-list-item">TRANG CHỦ</a>
-                    <a href="#" class="Nav-menu-content-list-item">GIỚI THIỆU</a>
-                    <a href="#" class="Nav-menu-content-list-item">SẢN PHẨM</a>
-                    <a href="#" class="Nav-menu-content-list-item">TIN TỨC</a>
-                    <a href="#" class="Nav-menu-content-list-item">LIÊN HỆ</a>
-                    <a href="#" class="Nav-menu-content-list-item">GIỎ HÀNG</a>
-                    <a href="#" class="Nav-menu-content-list-item">ĐĂNG NHẬP</a>
+    </div> 
+    
+    <!-- Product -->
+    <div class="Responsive">
+    <div class="Product">
+        <div class="Product-title">Sản phẩm bán chạy</div>
+        <div class="Product-content">
+            <div class="Product-content-list">
+                <div class="Product-content-item">
+                    <div class="product-content-item__img"><img src="/vipphone/img/product01.webp" alt="product"></div>
+                    <div class="Product-content-item__name"><p>Huawei P40 Pro</p></div>
+                    <div class="Product-content-item__price">23.990.000 đ <span>26.000.000 đ</span></div>
+                    <div class="Product-content-item__icon"><a class="info"><i class="fas fa-info-circle"></i></a><a class="card"><i class="fas fa-cart-plus"></i></a></div>
+                </div>
+                <div class="Product-content-item">
+                    <div class="product-content-item__img"><img src="/vipphone/img/product01.webp" alt="product"></div>
+                    <div class="Product-content-item__name"><p>Huawei P40 Pro</p></div>
+                    <div class="Product-content-item__price">23.990.000 đ <span>26.000.000 đ</span></div>
+                    <div class="Product-content-item__icon"><a class="info"><i class="fas fa-info-circle"></i></a><a class="card"><i class="fas fa-cart-plus"></i></a></div>
+                </div>
+                <div class="Product-content-item">
+                    <div class="product-content-item__img"><img src="/vipphone/img/product01.webp" alt="product"></div>
+                    <div class="Product-content-item__name"><p>Huawei P40 Pro</p></div>
+                    <div class="Product-content-item__price">23.990.000 đ <span>26.000.000 đ</span></div>
+                    <div class="Product-content-item__icon"><a class="info"><i class="fas fa-info-circle"></i></a><a class="card"><i class="fas fa-cart-plus"></i></a></div>
+                </div>
+                <div class="Product-content-item">
+                    <div class="product-content-item__img"><img src="/vipphone/img/product01.webp" alt="product"></div>
+                    <div class="Product-content-item__name"><p>Huawei P40 Pro</p></div>
+                    <div class="Product-content-item__price">23.990.000 đ <span>26.000.000 đ</span></div>
+                    <div class="Product-content-item__icon"><a class="info"><i class="fas fa-info-circle"></i></a><a class="card"><i class="fas fa-cart-plus"></i></a></div>
+                </div>
+                <div class="Product-content-item">
+                    <div class="product-content-item__img"><img src="/vipphone/img/product01.webp" alt="product"></div>
+                    <div class="Product-content-item__name"><p>Huawei P40 Pro</p></div>
+                    <div class="Product-content-item__price">23.990.000 đ <span>26.000.000 đ</span></div>
+                    <div class="Product-content-item__icon"><a class="info"><i class="fas fa-info-circle"></i></a><a class="card"><i class="fas fa-cart-plus"></i></a></div>
+                </div>
+                <div class="Product-content-item">
+                    <div class="product-content-item__img"><img src="/vipphone/img/product01.webp" alt="product"></div>
+                    <div class="Product-content-item__name"><p>Huawei P40 Pro</p></div>
+                    <div class="Product-content-item__price">23.990.000 đ <span>26.000.000 đ</span></div>
+                    <div class="Product-content-item__icon"><a class="info"><i class="fas fa-info-circle"></i></a><a class="card"><i class="fas fa-cart-plus"></i></a></div>
+                </div>
+                <div class="Product-content-item">
+                    <div class="product-content-item__img"><img src="/vipphone/img/product01.webp" alt="product"></div>
+                    <div class="Product-content-item__name"><p>Huawei P40 Pro</p></div>
+                    <div class="Product-content-item__price">23.990.000 đ <span>26.000.000 đ</span></div>
+                    <div class="Product-content-item__icon"><a class="info"><i class="fas fa-info-circle"></i></a><a class="card"><i class="fas fa-cart-plus"></i></a></div>
+                </div>
+                <div class="Product-content-item">
+                    <div class="product-content-item__img"><img src="/vipphone/img/product01.webp" alt="product"></div>
+                    <div class="Product-content-item__name"><p>Huawei P40 Pro</p></div>
+                    <div class="Product-content-item__price">23.990.000 đ <span>26.000.000 đ</span></div>
+                    <div class="Product-content-item__icon"><a class="info"><i class="fas fa-info-circle"></i></a><a class="card"><i class="fas fa-cart-plus"></i></a></div>
+                </div>
+                <div class="Product-content-item">
+                    <div class="product-content-item__img"><img src="/vipphone/img/product01.webp" alt="product"></div>
+                    <div class="Product-content-item__name"><p>Huawei P40 Pro</p></div>
+                    <div class="Product-content-item__price">23.990.000 đ <span>26.000.000 đ</span></div>
+                    <div class="Product-content-item__icon"><a class="info"><i class="fas fa-info-circle"></i></a><a class="card"><i class="fas fa-cart-plus"></i></a></div>
+                </div>
+                <div class="Product-content-item">
+                    <div class="product-content-item__img"><img src="/vipphone/img/product01.webp" alt="product"></div>
+                    <div class="Product-content-item__name"><p>Huawei P40 Pro</p></div>
+                    <div class="Product-content-item__price">23.990.000 đ <span>26.000.000 đ</span></div>
+                    <div class="Product-content-item__icon"><a class="info"><i class="fas fa-info-circle"></i></a><a class="card"><i class="fas fa-cart-plus"></i></a></div>
                 </div>
             </div>
+           
         </div>
-        </div>
-    </header>
+    </div>
+    </div>
+
+    <?= insertJS('/vipphone/top/js/script.js'); ?>
 </body>
 </html>
