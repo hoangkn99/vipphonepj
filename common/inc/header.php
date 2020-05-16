@@ -1,3 +1,19 @@
+<?php
+define('DOC_ROOT',$_SERVER['DOCUMENT_ROOT']);
+define('TITLE', 'HOME');
+require_once DOC_ROOT.'/vipphone/common/php/common.php';
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <?=insertHeadInfo();?>
+    <?=insertCSS('/vipphone/top/css/style.css');?>
+   
+</head>
+<body>
+    <!-- Header -->
+    
 <header class="only-pc">
         <div class="Responsive">
             <div class="Menu">
@@ -18,7 +34,7 @@
                     </div>
                 </div>
                 <div class="Menu-list">
-                    <a href="/vipphone/register.php" class="Menu-list_link">
+                    <a href="/vipphone/index.php" class="Menu-list_link">
                     <div class="Menu-list-item">
                         <div class="Menu-list-item-content">
                             <div class="Menu-list-item-content_icon"><i class="fas fa-home"></i></div>
@@ -26,7 +42,7 @@
                         </div>
                     </div>
                     </a>
-                    <a href="/vipphone/register.php" class="Menu-list_link">
+                    <a href="/vipphone/introduce.php" class="Menu-list_link">
                     <div class="Menu-list-item">
                         <div class="Menu-list-item-content">
                             <div class="Menu-list-item-content_icon"><i class="fas fa-info"></i></div>
@@ -34,7 +50,7 @@
                         </div>
                     </div>
                     </a>
-                    <a href="/vipphone/register.php" class="Menu-list_link">
+                    <a href="/vipphone/product.php" class="Menu-list_link">
                     <div class="Menu-list-item">
                         <div class="Menu-list-item-content">
                             <div class="Menu-list-item-content_icon"><i class="fas fa-mobile-alt"></i></div>
@@ -64,7 +80,7 @@
                             </div>
                         </div>
                     </div>
-                    <a href="/vipphone/register.php" class="Menu-list_link">
+                    <a href="/vipphone/accessories.php" class="Menu-list_link">
                     <div class="Menu-list-item">
                         <div class="Menu-list-item-content">
                             <div class="Menu-list-item-content_icon"><i class="fas fa-headphones-alt"></i></div>
@@ -72,7 +88,7 @@
                         </div>
                     </div>
                     </a>
-                    <a href="/vipphone/register.php" class="Menu-list_link">
+                    <a href="/vipphone/news.php" class="Menu-list_link">
                     <div class="Menu-list-item">
                         <div class="Menu-list-item-content">
                             <div class="Menu-list-item-content_icon"><i class="far fa-id-card"></i></div>
@@ -80,7 +96,7 @@
                         </div>
                     </div>
                     </a>
-                    <a href="/vipphone/register.php" class="Menu-list_link">
+                    <a href="/vipphone/contact.php" class="Menu-list_link">
                     <div class="Menu-list-item">
                         <div class="Menu-list-item-content">
                             <div class="Menu-list-item-content_icon"><i class="far fa-id-card"></i></div>
@@ -88,7 +104,7 @@
                         </div>
                     </div>
                     </a>
-                    <a href="/vipphone/register.php" class="Menu-list_link">
+                    <a href="/vipphone/cart.php" class="Menu-list_link">
                     <div class="Menu-list-item">
                         <div class="Menu-list-item-content">
                             <div class="Menu-list-item-content_icon"><i class="fas fa-shopping-cart"></i></div>
@@ -97,7 +113,7 @@
                     </div>
                     </a>
                     </a>
-                    <a href="/vipphone/register.php" class="Menu-list_link">
+                    <a href="/vipphone/login.php" class="Menu-list_link">
                     <div class="Menu-list-item">
                         <div class="Menu-list-item-content">
                             <div class="Menu-list-item-content_icon"><i class="fas fa-user"></i></div>
