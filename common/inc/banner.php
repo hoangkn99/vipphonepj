@@ -1,4 +1,4 @@
-<div class="Banner Responsive">
+<div class="Banner Responsive Background02">
         <div class="js-carousel Carousel">
             <div class="js-carouselCtx Carousel-content" >
                 <div class="js-carouselList Carousel-content-list">

@@ -1,4 +1,4 @@
-<div class="Responsive">
+<div class="Responsive  Background02">
         <div class="Product">
         <div class="Product-top">
             <div class="Product-title">

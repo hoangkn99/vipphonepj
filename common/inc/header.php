@@ -11,7 +11,7 @@ require_once DOC_ROOT.'/vipphone/common/php/common.php';
     <?=insertCSS('/vipphone/top/css/style.css');?>
    
 </head>
-<body>
+<body class="Background01">
     <!-- Header -->
     
 <header class="only-pc">

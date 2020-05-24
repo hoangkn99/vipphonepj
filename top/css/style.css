@@ -1,6 +1,14 @@
+
+.Background01 {
+    background:#F5F5F5;
+}
+.Background02 {
+    background:#fff;
+}
+
 /* header cho pc*/
 header {
-   background: #2C1E19;
+   background: #222222;
    height: 55px;
    color: white;  /* màu chữ trắng cho phần header*/
 }
@@ -11,7 +19,7 @@ header {
 /* tạo chiều dọc , đặt màu nền , đặt chiều cao của logo*/
 .Menu-branch {
     align-items: center;
-    background: #2C1E19;
+    background: #222222;
     display: flex;
     height: 55px;
     padding-right: 10px; /* giãn cách với list item*/
@@ -35,7 +43,7 @@ header {
     color: black;
     display: flex; justify-content: center;
     /*flex-grow: 1;*/
-    width:400px;
+    width:100%;
     height:35px;
     overflow: hidden; /*đối tượng con nào nằm ngoài đối tượng bố có thuộc tính này sẽ bị ẩn*/
 } 
@@ -169,7 +177,7 @@ header {
 
 }
 .Nav-content {
-    background:#2C1E19;
+    background:#222222;
     display:flex;
     height:55px;
     width:100%;
@@ -271,7 +279,7 @@ header {
  }
 
 .Nav-menu-content {
-    background: #2C1E19;
+    background: #222222;
  }
 .Nav-menu-content-list {
     display:flex;
@@ -352,11 +360,11 @@ header {
 }
 .Carousel-nav-item--active {
     color:white;
-    background: #2C1E19;
+    background: #222222;
 }
 .Carousel-nav-item--active .Carousel-nav-item__txt {
     color:white;
-    background: #2C1E19;
+    background: #222222;
 }
 .Banner-content {
     display: flex;
@@ -413,7 +421,7 @@ header {
         height:15px;
     }
     .Carousel-nav-item--active, .Carousel-nav-item--active:hover {
-        background: #2C1E19;
+        background: #222222;
     }
     .Banner-content__item {
         margin-bottom:0;
@@ -485,7 +493,7 @@ margin-top:8px;
 .Product-top {
     display: flex;
     
-    background: #2C1E19;
+    background: #222222;
     color:#d5d5d5;
 
 }
@@ -544,6 +552,10 @@ margin-top:8px;
     margin: 0.5%;
     width:19%;
 }
+.product-content-item__img img{
+    width:100%;
+    height: 100%;
+}
 .Product-content-item:hover {
     box-shadow: 5px 5px 5px rgb(92, 91, 91);
     transition: ease-in-out 0.5s;
@@ -591,7 +603,7 @@ margin-top:8px;
 @media screen and (max-width: 1024px) {
     .Product-top {
         display: flex;
-        background: #2C1E19;
+        background: #222222;
         color:#d5d5d5;
         flex-direction: column;
     
@@ -613,7 +625,7 @@ margin-top:8px;
         width:32.33%;
     }
   
-
+}
 /*Từ 420px trở xuống*/
 @media screen and (max-width: 420px) {
     .Product-content-item {
@@ -626,17 +638,13 @@ margin-top:8px;
 
   .Footer {
     display: flex;
-    
     position: relative;
     margin-top: 8px;
     bottom:0;
     height:200px;
     width:100%;
-    background: #2C1E19;
+    background: #222222;
     color:#d5d5d5;
-    
-
-    
   }
 
 .Footer-contact p{
@@ -709,7 +717,7 @@ margin-top:8px;
 .Footer-payment-bot img {
     width: 160px;
     height:50px;
-    }
+}
 
 .Footer p:hover{
     color:#ffffff;
@@ -724,13 +732,12 @@ margin-top:8px;
     }
   }
 
-  @media screen and (max-width: 414px) {
-    .Footer {
+@media screen and (max-width: 414px) {
+.Footer {
         flex-direction: column;
         height:500px;
-        padding-left: 15px;
-     
-    }
+        padding-left: 15px; 
+}
    .Footer-contact {
        width:100%;
 
@@ -746,4 +753,191 @@ margin-top:8px;
    .Footer-follow {
        width:100%;
    }
+}
+
+
+/*-----------------------------------CSS---------------------------------------*/
+.url {
+    background:#ddd;
+    padding:5px;
+}
+.url a{
+    color:#222222;
+}
+.url a:hover{
+    text-decoration: underline;
+}
+
+
+/*-----------------------------------contact page -------------------------------------------------*/
+.Contact {
+  
+    margin-top:8px;
+   
+}
+.Contact-url {
+    background:#ddd;
+    padding:5px;
+    margin-bottom:8px;
+  
+}
+
+.Contact-url a{
+    color:#222222;
+}
+.Contact-url a:hover{
+    text-decoration: underline;
+}
+.Contact-content {
+    border: 1px solid #d5d5d5;
+}
+.Contact-title p{
+    padding:5px 10px;
+    font-size:18px;
+    font-weight: bold;
+    background: #222222;
+    color:#d5d5d5;
+}
+
+.Contact-map {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.Contact-map iframe{
+    padding:8px 0;
+    border: 1px solid #ddd;
+}
+
+/*---------------------------------------Accessories page -----------------------------*/
+.Accessories {
+    margin-top: 8px;
+}
+/*---------------------------------------Introduce page -----------------------------*/
+.Introduce {
+    margin-top: 8px;
+}
+/*---------------------------------------News page -----------------------------*/
+.News {
+    margin-top: 8px;
+}
+/*---------------------------------------Cart page -----------------------------*/
+.Cart {
+    margin-top: 8px;
+}
+/*---------------------------------------Login page -----------------------------*/
+.Login {
+    margin-top: 8px;
+}
+
+.Login-form {
+    width:350px;
+    height:450px;
+    margin:0 auto;
+    border:1px solid #ddd;
+    border-radius: 15px;
+    margin-top:8px;
+    margin-bottom: 8px;
+}
+.Login-header {
+    color:#222222;
+    text-align: center;
+    padding:20px 0;
+}
+.Login-user {
+    border:1px solid #ddd;
+    display: flex;
+    margin:0 50px;
+    height:35px;
+ 
+}
+.Login-user input{
+    flex-grow: 1;
+}
+.Login-pass {
+    border:1px solid #ddd;
+    display: flex;
+    margin:0 50px;
+    height:35px;
+    margin-top:16px;
+}
+.Login-pass input{
+    flex-grow: 1;
+}
+.Login-btn {
+    border:1px solid #ddd;
+    display: flex;
+    margin:0 50px;
+    height:35px;
+    margin-top:24px; 
+    background: #222222;
+
+}
+
+.Login-btn input{
+    flex-grow: 1;
+    color:#ddd;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.Login-txt {
+    text-align: center;
+    margin:25px 0;
+}
+.Login-ico {
+    display: flex;
+}
+.Login-ico a{
+    text-align: center;
+   
+    padding:3px;
+    width:120px;
+    height:30px;
+    font-weight: bold;
+}
+
+
+.Login-ico-fb {
+    margin-left:15%;
+    margin-right:5%;
+    color:#1f00ff;
+    border:1px solid #ddd;
+}
+.Login-ico-fb:hover {
+    border:1px solid #1f00ff;
+    transition: 0.5s;
+}
+
+.Login-ico-gg {
+    color:#ff0000;
+    margin-right:15%;
+    margin-left:5%;
+    border:1px solid #ddd;
+}
+.Login-ico-gg:hover{
+    border:1px solid #ff0000;
+    transition: 0.5s;
+}
+
+
+.Login-sigup {
+    padding-top:32px;
+    text-align:center;
+}
+.Login-sigup__link {
+    color:#3ac0ff;
+}
+.Login-sigup__link:hover {
+    text-decoration: underline;
+    transition:0.5s;
+}
+/*---------------------------------------Register page -----------------------------*/
+.Register {
+    margin-top: 8px;
+}
+
+.Register {
+    margin-top:8px;
 }

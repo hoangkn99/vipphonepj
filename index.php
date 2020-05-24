@@ -6,5 +6,6 @@
     
     <!-- Product01 -->
     <?php include_once('common/inc/product01.php') ?>  
+    <?php include_once('common/inc/product02.php') ?>
     <!---Footer-->
     <?php include_once('common/inc/footer.php') ?>  
