@@ -1,1 +1,1 @@
-# vipphonepj
+# vipphonepj responsive, html css js(jquery) 
